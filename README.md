@@ -9,7 +9,9 @@ merely loud right now.
 
 Programming is a puzzle and a craft at the same time: solve the problem,
 then make the code simpler than the problem was. I find a problem, I build
-a tool. Nobody asked for any of these — the good ones never are.
+a tool — lately in Python and TypeScript, on the command line and against
+whatever API is in the way. Nobody asked for any of these — the good ones
+never are.
 
 ### What I hold to
 
@@ -31,7 +33,10 @@ reach should not take an afternoon to reconstruct.
 
 ### Projects
 
-Nothing public yet — the first one is close.
+**[logseq-cli](https://github.com/muellerei/logseq-cli)** — read and write a
+Logseq graph from a shell or an AI agent. Python, `click`, no vendor
+coupling. Verified writes, because the API answers a failed one with
+HTTP 200 and `null`.
 
 ---
 
