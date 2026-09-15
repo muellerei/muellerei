@@ -38,6 +38,12 @@ Logseq graph from a shell or an AI agent. Python, `click`, no vendor
 coupling. Verified writes, because the API answers a failed one with
 HTTP 200 and `null`.
 
+**[roadmapper](https://github.com/muellerei/roadmapper)** — derive a Notion
+roadmap from GitLab epics and milestones. One way only: the board is a view,
+so it cannot drift from the tracker. TypeScript, two dependencies, one
+command for cron. Progress is a sum over the issue tree, which is the one
+thing a field mapping cannot do.
+
 ---
 
 *Germany. Off the keyboard: a gravel bike, daily, non-negotiable.*
