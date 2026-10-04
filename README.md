@@ -44,6 +44,17 @@ so it cannot drift from the tracker. TypeScript, two dependencies, one
 command for cron. Progress is a sum over the issue tree, which is the one
 thing a field mapping cannot do.
 
+**[task-line](https://github.com/muellerei/task-line)** — a Claude Code mod that
+draws one line per task list above the prompt: the current task, a progress bar
+and the count. It reads the lists Claude keeps and creates none, and looks the
+same in the terminal and the desktop app. TypeScript, no network, no files.
+
+**[enable-todo-tools](https://github.com/muellerei/enable-todo-tools)** — a
+Claude Code mod with one job. Newer models leave Claude's todo tools out, so
+anything that reads the list has nothing to show; this sets
+`CLAUDE_CODE_ENABLE_TODO_TOOLS=1` at session start. Opt-in, and the companion
+to task-line.
+
 ---
 
 *Germany. Off the keyboard: a gravel bike, daily, non-negotiable.*
