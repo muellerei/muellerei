@@ -33,27 +33,35 @@ reach should not take an afternoon to reconstruct.
 
 ### Projects
 
-**[logseq-cli](https://github.com/muellerei/logseq-cli)** — read and write a
+**[logseq-cli](https://github.com/muellerei/logseq-cli)**: read and write a
 Logseq graph from a shell or an AI agent. Python, `click`, no vendor
 coupling. Verified writes, because the API answers a failed one with
 HTTP 200 and `null`.
 
-**[roadmapper](https://github.com/muellerei/roadmapper)** — derive a Notion
+**[roadmapper](https://github.com/muellerei/roadmapper)**: derive a Notion
 roadmap from GitLab epics and milestones. One way only: the board is a view,
 so it cannot drift from the tracker. TypeScript, two dependencies, one
 command for cron. Progress is a sum over the issue tree, which is the one
 thing a field mapping cannot do.
 
-**[task-line](https://github.com/muellerei/task-line)** — a Claude Code mod that
+**[task-line](https://github.com/muellerei/task-line)**: a Claude Code mod that
 draws one line per task list above the prompt: the current task, a progress bar
 and the count. It reads the lists Claude keeps and creates none, and looks the
 same in the terminal and the desktop app. TypeScript, no network, no files.
 
-**[enable-todo-tools](https://github.com/muellerei/enable-todo-tools)** — a
+**[enable-todo-tools](https://github.com/muellerei/enable-todo-tools)**: a
 Claude Code mod with one job. Newer models leave Claude's todo tools out, so
 anything that reads the list has nothing to show; this sets
 `CLAUDE_CODE_ENABLE_TODO_TOOLS=1` at session start. Opt-in, and the companion
 to task-line.
+
+**[sweet-spot](https://github.com/muellerei/sweet-spot)**: a Claude Code mod that
+never acts in the middle of a turn. It waits for a pause, counts down with a
+"Not now", and holds back while a subagent is running. Only then does it hand
+a long session over before the context gets too big, to a fresh session that
+starts from a handoff or by Claude Code's own `/compact`. The 200k default
+comes from a measurement, not a feeling: most of the cost in real sessions came
+from calls above it. TypeScript, no network, writes nothing.
 
 ---
 
