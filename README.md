@@ -2,16 +2,15 @@
 
 Tools I needed and nobody had built.
 
-Writing code since 1985, paid for it since around 1990 — Fortran77, Oracle
+Writing code since 1985, paid for it since around 1990: Fortran77, Oracle
 Forms, LAMP, Angular, and whatever the current generation calls itself.
 Long enough to tell what will still be here in ten years from what is
 merely loud right now.
 
 Programming is a puzzle and a craft at the same time: solve the problem,
 then make the code simpler than the problem was. I find a problem, I build
-a tool — lately in Python and TypeScript, on the command line and against
-whatever API is in the way. Nobody asked for any of these — the good ones
-never are.
+a tool, lately in Python and TypeScript, on the command line and against
+whatever API is in the way.
 
 ### What I hold to
 
@@ -25,7 +24,7 @@ depend on may not. Knowing which one you are writing is most of the job.
 else has to keep. Standards outlive vendors.
 
 **A view must not be able to disagree with its source.** Anything derived
-gets recomputed, never kept by hand in a second place — two versions of
+gets recomputed, never kept by hand in a second place. Two versions of
 the truth start drifting the day you write the second one.
 
 **Write down why, not just what.** A decision that took an afternoon to
