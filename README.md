@@ -30,7 +30,7 @@ the truth start drifting the day you write the second one.
 **Write down why, not just what.** A decision that took an afternoon to
 reach should not take an afternoon to reconstruct.
 
-### Projects
+### Tools
 
 **[logseq-cli](https://github.com/muellerei/logseq-cli)**: read and write a
 Logseq graph from a shell or an AI agent. Python, `click`, no vendor
@@ -43,7 +43,7 @@ so it cannot drift from the tracker. Progress is a sum over the issue tree,
 which is the one thing a field mapping cannot do. TypeScript, two
 dependencies, one command for cron.
 
-#### Claude Code mods
+### Claude Code mods
 
 All TypeScript, no network, and none of them writes files.
 
