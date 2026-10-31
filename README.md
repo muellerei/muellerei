@@ -40,36 +40,28 @@ HTTP 200 and `null`.
 
 **[roadmapper](https://github.com/muellerei/roadmapper)**: derive a Notion
 roadmap from GitLab epics and milestones. One way only: the board is a view,
-so it cannot drift from the tracker. TypeScript, two dependencies, one
-command for cron. Progress is a sum over the issue tree, which is the one
-thing a field mapping cannot do.
+so it cannot drift from the tracker. Progress is a sum over the issue tree,
+which is the one thing a field mapping cannot do. TypeScript, two
+dependencies, one command for cron.
 
-**[task-line](https://github.com/muellerei/task-line)**: a Claude Code mod that
-draws one line per task list above the prompt: the current task, a progress bar
-and the count. It reads the lists Claude keeps and creates none, and looks the
-same in the terminal and the desktop app. TypeScript, no network, no files.
+#### Claude Code mods
 
-**[enable-todo-tools](https://github.com/muellerei/enable-todo-tools)**: a
-Claude Code mod with one job. Newer models leave Claude's todo tools out, so
-anything that reads the list has nothing to show; this sets
-`CLAUDE_CODE_ENABLE_TODO_TOOLS=1` at session start. Opt-in, and the companion
-to task-line.
+All TypeScript, no network, and none of them writes files.
 
-**[sweet-spot](https://github.com/muellerei/sweet-spot)**: a Claude Code mod that
-never acts in the middle of a turn. It waits for a pause, counts down with a
-"Not now", and holds back while a subagent is running. Only then does it hand
-a long session over before the context gets too big, to a fresh session that
-starts from a handoff or by Claude Code's own `/compact`. The 200k default
-comes from a measurement, not a feeling: most of the cost in real sessions came
-from calls above it. TypeScript, no network, writes nothing.
-
-**[diff-fold](https://github.com/muellerei/diff-fold)**: a Claude Code mod that
-shows one line per file instead of the diff under a finished edit: the path,
-the first changed line and the lines added and removed. Small diffs, edits
-waiting for review and changes to secrets, CI or Claude's own instructions stay
-in full, because a summary line would hide what such a change does. Derived
-from hide-diffs, keeping only the folding. TypeScript, no network, writes
-nothing.
+- **[task-line](https://github.com/muellerei/task-line)**: one line per task
+  list above the prompt, with the current task, a progress bar and the count.
+  It reads the lists Claude keeps and creates none.
+- **[enable-todo-tools](https://github.com/muellerei/enable-todo-tools)**:
+  newer models leave Claude's todo tools out, so task-line would have nothing
+  to show. This sets `CLAUDE_CODE_ENABLE_TODO_TOOLS=1` at session start.
+- **[sweet-spot](https://github.com/muellerei/sweet-spot)**: hands a long
+  session over before the context gets too big, at a pause and never mid-turn.
+  The 200k default is measured: most of the cost in real sessions came from
+  calls above it.
+- **[diff-fold](https://github.com/muellerei/diff-fold)**: one line per file
+  instead of the diff under a finished edit. Small diffs and changes to
+  secrets, CI or Claude's own instructions stay in full, because a summary
+  would hide what they do.
 
 ---
 
