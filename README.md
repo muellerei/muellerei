@@ -63,6 +63,14 @@ starts from a handoff or by Claude Code's own `/compact`. The 200k default
 comes from a measurement, not a feeling: most of the cost in real sessions came
 from calls above it. TypeScript, no network, writes nothing.
 
+**[diff-fold](https://github.com/muellerei/diff-fold)**: a Claude Code mod that
+shows one line per file instead of the diff under a finished edit: the path,
+the first changed line and the lines added and removed. Small diffs, edits
+waiting for review and changes to secrets, CI or Claude's own instructions stay
+in full, because a summary line would hide what such a change does. Derived
+from hide-diffs, keeping only the folding. TypeScript, no network, writes
+nothing.
+
 ---
 
 *Germany. Off the keyboard: a gravel bike, daily, non-negotiable.*
