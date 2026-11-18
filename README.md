@@ -48,8 +48,9 @@ dependencies, one command for cron.
 All TypeScript, no network, and none of them writes files.
 
 - **[task-line](https://github.com/muellerei/task-line)**: one line per task
-  list above the prompt, with the current task, a progress bar and the count.
-  It reads the lists Claude keeps and creates none.
+  list above the prompt, with the current task, a progress bar and the count,
+  and a row for each shell command or subagent still running in the
+  background. It reads the lists Claude keeps and creates none.
 - **[enable-todo-tools](https://github.com/muellerei/enable-todo-tools)**:
   newer models leave Claude's todo tools out, so task-line would have nothing
   to show. This sets `CLAUDE_CODE_ENABLE_TODO_TOOLS=1` at session start.
